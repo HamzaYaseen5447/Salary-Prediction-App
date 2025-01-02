@@ -22,7 +22,8 @@ if st.button('Submit'):
     
     st.table(df)
 
-    model = joblib.load('random_forest_regressor_model.pkl')
+    # model = joblib.load('random_forest_regressor_model.pkl')
+    model = joblib.load('model.joblib')
     
     input_data = pd.DataFrame({
         'Age': [age],
