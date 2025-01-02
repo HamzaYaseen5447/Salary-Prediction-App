@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+from joblib import load
 
 st.title('User Details Form to predict Salary')
 
@@ -23,7 +23,7 @@ if st.button('Submit'):
     st.table(df)
 
     # model = joblib.load('random_forest_regressor_model.pkl')
-    model = joblib.load('model.joblib')
+    model = load('model.joblib')
     
     input_data = pd.DataFrame({
         'Age': [age],
